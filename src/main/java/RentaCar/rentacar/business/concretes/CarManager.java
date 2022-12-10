@@ -12,6 +12,7 @@ import RentaCar.rentacar.core.utilities.results.SuccessDataResult;
 import RentaCar.rentacar.core.utilities.results.SuccessResult;
 import RentaCar.rentacar.dataAccess.abstracts.CarDao;
 import RentaCar.rentacar.entities.concrete.Car;
+import RentaCar.rentacar.entities.dtos.CarWithBrandsDto;
 
 
 @Service
@@ -37,16 +38,26 @@ public class CarManager implements CarService {
 		return new SuccessResult("Ürün eklendi");
 	}
 
-	@Override
+/*	@Override
 	public DataResult<Car> getByColorId(int colorId) {
-		
 		return new SuccessDataResult<Car>(this.carDao.getByColorId(colorId),"data listelendi");
 	}
-
-	@Override
+*/
+	/*@Override
 	public DataResult<Car> getByBrandId(int brandId) {
 		// TODO Auto-generated method stub
 		return new SuccessDataResult<Car>(this.carDao.getByBrandId(brandId),"data listelendi");
+	}*/
+
+	@Override
+	public DataResult<List<CarWithBrandsDto>> getCarWithBrandsDetails() {
+		// TODO Auto-generated method stub
+		return new SuccessDataResult<List<CarWithBrandsDto>>(this.carDao.getCarWithBrandsDetails(),"data listelendi");
 	}
 
+
+
+
+
+	
 }

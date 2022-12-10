@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RestController;
+
 
 import RentaCar.rentacar.business.abstracts.ColorService;
 import RentaCar.rentacar.core.utilities.results.DataResult;
 import RentaCar.rentacar.core.utilities.results.Result;
-
 import RentaCar.rentacar.entities.concrete.Color;
 
 @RestController
@@ -35,5 +36,6 @@ public class ColorsControllers {
 	public Result add(@RequestBody Color color) {
 		return this.colorService.add(color);
 	}
+	
 	
 }

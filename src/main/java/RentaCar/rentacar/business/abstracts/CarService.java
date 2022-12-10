@@ -6,6 +6,9 @@ import RentaCar.rentacar.core.utilities.results.DataResult;
 import RentaCar.rentacar.core.utilities.results.Result;
 
 import RentaCar.rentacar.entities.concrete.Car;
+import RentaCar.rentacar.entities.dtos.CarWithBrandsDto;
+
+
 
 
 
@@ -14,6 +17,8 @@ public interface CarService {
 	DataResult<List<Car>> getAll();
 
 	Result add(Car car);
-	DataResult<Car> getByColorId(int colorId);
-	DataResult<Car> getByBrandId(int brandId);
+	
+	
+	
+	DataResult<List<CarWithBrandsDto>> getCarWithBrandsDetails();
 }

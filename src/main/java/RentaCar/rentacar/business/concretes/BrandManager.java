@@ -17,6 +17,7 @@ import RentaCar.rentacar.dataAccess.abstracts.BrandDao;
 import RentaCar.rentacar.entities.concrete.Brands;
 
 
+
 @Service
 public class BrandManager implements BrandService {
 
@@ -40,6 +41,9 @@ public class BrandManager implements BrandService {
 		this.brandDao.save(brands);
 		return new SuccessResult("Ürün eklendi");
 	}
+
+
+
 	
 	
 }

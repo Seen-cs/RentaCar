@@ -11,7 +11,6 @@ import RentaCar.rentacar.core.utilities.results.Result;
 import RentaCar.rentacar.core.utilities.results.SuccessDataResult;
 import RentaCar.rentacar.core.utilities.results.SuccessResult;
 import RentaCar.rentacar.dataAccess.abstracts.ColorDao;
-import RentaCar.rentacar.entities.concrete.Car;
 import RentaCar.rentacar.entities.concrete.Color;
 
 @Service
@@ -35,5 +34,7 @@ public class ColorManager implements ColorService {
 		this.colorDao.save(color);
 		return new SuccessResult("Ürün eklendi");
 	}
+
+	
 
 }

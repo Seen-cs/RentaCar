@@ -11,8 +11,11 @@ import RentaCar.rentacar.entities.concrete.Brands;
 
 
 
+
 public interface BrandService {
 
 	DataResult<List<Brands>> getAll();
 	Result add(Brands brands);
+	
+	
 }

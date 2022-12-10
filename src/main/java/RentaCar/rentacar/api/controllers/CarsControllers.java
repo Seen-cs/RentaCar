@@ -7,13 +7,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import RentaCar.rentacar.business.abstracts.CarService;
 import RentaCar.rentacar.core.utilities.results.DataResult;
 import RentaCar.rentacar.core.utilities.results.Result;
 import RentaCar.rentacar.entities.concrete.Car;
+import RentaCar.rentacar.entities.dtos.CarWithBrandsDto;
 
 
 @RestController
@@ -37,14 +38,20 @@ public class CarsControllers {
 		return this.carService.add(car);
 	}
 	
-	
-	@GetMapping("/getbycolorid")//Requestparam yapılan istekten istediğimizi parametreyi getirememiz yarar
+
+	/*@GetMapping("/getbycolorid")//Requestparam yapılan istekten istediğimizi parametreyi getirememiz yarar
 	public DataResult<Car> getByColorId(@RequestParam int colorId) {
 		return this.carService.getByColorId(colorId);
-	}//getByBrandId
+	}//getByBrandId*/
 	
-	@GetMapping("/getbybrandid")//Requestparam yapılan istekten istediğimizi parametreyi getirememiz yarar
+	/*@GetMapping("/getbybrandid")//Requestparam yapılan istekten istediğimizi parametreyi getirememiz yarar
 	public DataResult<Car> getByBrandId(@RequestParam int brandId) {
 		return this.carService.getByBrandId(brandId);
+	}*/
+	
+	@GetMapping("/getCarWithBrandDetails")
+	public DataResult<List<CarWithBrandsDto>> getCarWithBrandsDetails() {
+	return this.carService.getCarWithBrandsDetails();
 	}
+	
 }
