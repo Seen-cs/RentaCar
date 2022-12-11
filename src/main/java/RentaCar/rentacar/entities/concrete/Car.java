@@ -31,8 +31,8 @@ public class Car {
 	/*@Column(name="brand_id")
 	private int brandId;*/
 	
-	@Column(name="color_id")
-	private int colorId;
+	/*@Column(name="color_id")
+	private int colorId;*/
 	
 	@Column(name="car_name")
 	private String carName;
@@ -50,6 +50,10 @@ public class Car {
 	@ManyToOne()
 	@JoinColumn(name="brand_id")//categoryId tutmamıza gerek yok yukarıda bu sayede
 	private Brands brand;
+	
+	@ManyToOne()
+	@JoinColumn(name="color_id")//categoryId tutmamıza gerek yok yukarıda bu sayede
+	private Color color;
 	
 	
 	

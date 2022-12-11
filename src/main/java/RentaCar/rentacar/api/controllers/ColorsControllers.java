@@ -28,7 +28,7 @@ public class ColorsControllers {
 		this.colorService = colorService;
 	}
 	
-	@GetMapping("/getall")//http["getall"] asp.nette
+	@GetMapping("/getall")//http["getall"] asp.nette//id ve colorname getirir
 	 public DataResult<List<Color>> getAll(){
 		 return  this.colorService.getAll();
 	 }

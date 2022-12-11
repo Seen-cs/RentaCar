@@ -18,7 +18,6 @@ public interface CarService {
 
 	Result add(Car car);
 	
-	
-	
 	DataResult<List<CarWithBrandsDto>> getCarWithBrandsDetails();
+	
 }

@@ -15,4 +15,5 @@ public class CarWithBrandsDto {
 	private String brandName;
 	private String description;
 	private int dailyPrice;
+	private String colorName;
 }

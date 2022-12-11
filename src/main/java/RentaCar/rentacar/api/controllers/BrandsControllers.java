@@ -33,7 +33,7 @@ public class BrandsControllers {
 	}
 	
 	
-	@GetMapping("/getall")
+	@GetMapping("/getall")//brandId ve Brand Name getiriyor
 	 public DataResult<List<Brands>> getAll(){
 		 return  this.brandService.getAll();
 	 }

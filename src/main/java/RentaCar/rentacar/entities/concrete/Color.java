@@ -2,6 +2,7 @@ package RentaCar.rentacar.entities.concrete;
 
 
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,8 +30,7 @@ public class Color {
 	@Column(name="color_name")
 	private String colorName;
 
-	
-
-	
+	/*@OneToMany(mappedBy = "color")
+	 private List<Car> car;*/
 	
 }
