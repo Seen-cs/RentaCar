@@ -20,4 +20,6 @@ public interface CarService {
 	
 	DataResult<List<CarWithBrandsDto>> getCarWithBrandsDetails();
 	
+	DataResult<List<RentaCar.rentacar.entities.dtos.CarWithBrandsDto>> getByColorId(int colorId);
+	DataResult<List<RentaCar.rentacar.entities.dtos.CarWithBrandsDto>> getByBrandId(int brandId);
 }

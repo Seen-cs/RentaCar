@@ -55,6 +55,18 @@ public class CarManager implements CarService {
 		return new SuccessDataResult<List<CarWithBrandsDto>>(this.carDao.getCarWithBrandsDetails(),"data listelendi");
 	}
 
+	@Override
+	public DataResult<List<RentaCar.rentacar.entities.dtos.CarWithBrandsDto>> getByColorId(int colorId) {
+		
+		return new SuccessDataResult<List<RentaCar.rentacar.entities.dtos.CarWithBrandsDto>>(this.carDao.getByColorId(colorId),"data listelendi");
+	}
+
+	@Override
+	public DataResult<List<RentaCar.rentacar.entities.dtos.CarWithBrandsDto>> getByBrandId(int brandId) {
+		// TODO Auto-generated method stub
+		return new SuccessDataResult<List<RentaCar.rentacar.entities.dtos.CarWithBrandsDto>>(this.carDao.getByBrandId(brandId),"data listelendi");
+	}
+
 
 
 
